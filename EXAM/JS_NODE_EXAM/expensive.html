@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-[500px] bg-red-200  ml-[250px] h-[300px] mt-[150px]">
+    <form id="expensiveform">
+    <h1 class="text-3xl font-medium mb-[20px] text-center">Expensive Tracker</h1>
+    <label>Type of Expensive:</label>
+    <select name="expensive" id="expensice">
+    <option value="">fee expensive</option>
+    <option value="">hospital expensive</option>
+    <option value="">market expensive</option>
+    <option value="">rent expensive</option>
+    <option value="other" id="other">Other</option>
+    </select>
+   <br><br>
+    <label class="p-1" >Amount:</label>
+    <input type="number" value="amount" id="amount">
+    <br><br>
+    <label class="py-5" >Date:</label>
+    <input type="date" value="date" id="date1"><br><br>
+    <button onclick="submitexpensive(event)" class="w-[110px] bg-blue-300 p-[10px]  ml-[150px]">Show expensive</button>
+<select name="month" id="month">
+    <option value="">January</option>
+    <option value="">February</option>
+    <option value="">March</option>
+    <option value="">April</option>
+    <option value="">May</option>
+    <option value="">June</option>
+    <option value="">July</option>
+    <option value="">August</option>
+    <option value="">September</option>
+    <option value="">October</option>
+    <option value="">November</option>
+    <option value="">December</option>
+</select>
+</form>
+</div>
+<div id="output" class="text-center">
+    <h2 id="h2" class="text-xl font-medium"></h2>
+    <ul id="expensivelist"></ul>
+</div>
+
+
+<script>
+    expensive=[];
+    amount=[];
+    dates1=[];
+    function submitexpensive(event){
+    event.preventDefault();
+    const expensive=document.getElementById("expensive").value;
+    const amount=document.getElementById("amount").value;
+    const date1 = document.getElementById("date1").value;
+
+    if(expensives & amount&date1){
+        expensives.push(expensive);
+        amounts.push(amount);
+        dates1.push(date1);
+        document.getElementById('expensiveform').reset();
+        
+        document.getElementById("h2").innerHTML = ("Expensive Details")
+        const expensivelist = document.getElementById("expensivelist");
+
+        
+        const listitem = document.createElement("li");
+        listitem.textContent = `Expensive:-${expensives}: - Amount :${amounts}:-Date${dates1}`
+        listitem.classList.add(expensivelist);
+        
+
+ 
+    }
+    }
+
+
+
+</script>
+
+</body>
+</html>
