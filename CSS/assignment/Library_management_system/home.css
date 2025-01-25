@@ -1,0 +1,195 @@
+body {
+    background-color: #e2e8f0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #2d3748;
+    color: white;
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 108px;
+}
+
+.title {
+    font-size: 22px;
+    margin-left: 18px;
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.main-image {
+    width: 100%;
+    max-width: 1000px;
+  
+}
+
+.info {
+    background-color: #4a5568;
+    color: white;
+    padding: 3.6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    /* Make info section take up remaining space */
+    margin-left: 20px;
+    /* Space between image and info */
+}
+
+.info-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.info {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .nav {
+        gap: 16px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        /* Stack image and info vertically */
+        text-align: center;
+        /* Center content */
+    }
+
+    .main-image {
+        max-width: 100%;
+        /* Image width should be 100% of the container */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .info {
+        margin-left: 0;
+        /* Remove left margin */
+        margin-top: 20px;
+        /* Space between image and info */
+        padding: 15px;
+    }
+
+    .info-title {
+        font-size: 28px;
+    }
+
+    .info {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        /* Stack header content vertically */
+        align-items: flex-start;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 18px;
+        margin-left: 0;
+        /* Remove margin for small screens */
+    }
+
+    .nav {
+        flex-direction: column;
+        /* Stack navigation links vertically */
+        gap: 12px;
+        text-align: center;
+    }
+
+    .main-content {
+        flex-direction: column;
+        /* Stack image and info vertically */
+        text-align: center;
+    }
+
+    .main-image {
+        max-width: 100%;
+        /* Ensure image is responsive */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .info {
+        margin-left: 0;
+        /* Remove margin */
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    .info-title {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 12px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+
+    .main-image {
+        width: 100%;
+       
+        height: auto;
+     
+    }
+
+    .info {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+
+    .info-title {
+        font-size: 20px;
+    }
+}
