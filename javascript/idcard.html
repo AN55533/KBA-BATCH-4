@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Proof Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            margin: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            width: 350px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        input,
+        textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .idcard {
+            display: none;
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: left;
+            border: 2px solid #007bff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin: auto;
+        }
+
+        .idcard h3 {
+            text-align: center;
+            background: #007bff;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .idcard p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>ID Proof Generator</h2>
+
+        <input type="text" id="firstName" placeholder="First Name">
+        <input type="text" id="lastName" placeholder="Last Name">
+        <input type="date" id="dob">
+        <textarea id="address" placeholder="Enter Address"></textarea>
+        <input type="text" id="phoneNumber" placeholder="Phone Number">
+
+        <button onclick="generateID()">Generate ID</button>
+
+        <div class="idcard" id="idCard">
+            <h3>ID Proof</h3>
+            <p><strong>Name:</strong> <span id="displayName"></span></p>
+            <p><strong>Date of Birth:</strong> <span id="displayDob"></span></p>
+            <p><strong>Address:</strong> <span id="displayAddress"></span></p>
+            <p><strong>Phone:</strong> <span id="displayPhone"></span></p>
+        </div>
+    </div>
+
+    <script>
+        function generateID() {
+            let person = {
+                firstName: document.getElementById("firstName").value,
+                lastName: document.getElementById("lastName").value,
+                dob: document.getElementById("dob").value,
+                address: document.getElementById("address").value,
+                phoneNumber: document.getElementById("phoneNumber").value
+            };
+            if (!person.firstName || !person.lastName || !person.dob || !person.address || !person.phoneNumber) {
+                alert("Please fill all fields.");
+                return;
+            }
+
+            document.getElementById("displayName").textContent = `${person.firstName} ${person.lastName}`;
+            document.getElementById("displayDob").textContent = person.dob;
+            document.getElementById("displayAddress").textContent = person.address;
+            document.getElementById("displayPhone").textContent = person.phoneNumber;
+            document.getElementById("idCard").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>

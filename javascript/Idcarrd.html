@@ -1,0 +1,123 @@
+<!-- HTML page to read "name, date-of-birth" and diaplay this in format of id card on clicking "generate ID" button. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            margin: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .id-card {
+            display: none;
+            /* Initially hidden */
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            width: 250px;
+            text-align: left;
+            border: 2px solid #007bff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .id-card h3 {
+            text-align: center;
+            background: #007bff;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .id-card p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #ddd;
+            margin: 10px auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>ID Card Generator</h2>
+
+        <input type="text" id="name" placeholder="Enter Your Name">
+        <input type="date" id="dob">
+
+        <button onclick="generateID()">Generate ID</button>
+
+        <!-- ID Card Section -->
+        <div class="id-card" id="idCard">
+            <h3>ID Card</h3>
+            <img src="https://via.placeholder.com/80" alt="Profile Picture" class="profile-pic">
+            <p><strong>Name:</strong> <span id="displayName"></span></p>
+            <p><strong>Date of Birth:</strong> <span id="displayDob"></span></p>
+        </div>
+    </div>
+
+    <script>
+        function generateID() {
+            let name = document.getElementById("name").value;
+            let dob = document.getElementById("dob").value;
+
+            if (name.trim() === "" || dob.trim() === "") {
+                alert("Please enter both Name and Date of Birth.");
+                return;
+            }
+
+            document.getElementById("displayName").textContent = name;
+            document.getElementById("displayDob").textContent = dob;
+            document.getElementById("idCard").style.display = "block"; // Show ID card
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add To Cart</title>
+</head>
+
+<body>
+    <div class="product">
+        <h2>Apple </h2>
+        <p>1kg</p>
+        <p>Rs 200.00</p>
+        <button onclick="addToCart('Apple',1, 200.00)">Add To Cart</button>
+    </div>
+    <div class="product">
+        <h2>Orange</h2>
+        <p>1</p>
+        <p>Rs 200</p>
+        <button onclick="addToCart('Orange',1, 200.00)">Add To Cart</button>
+    </div>
+    <h2>Cart</h2>
+    <ul id="cart"></ul>
+    <script>
+        const cart = {};
+        function addToCart(productName, quantity, Price) {
+           
+                cart[productName] = {
+                    quantity: quantity,
+                    Price: Price
+                };
+            
+            updateCartDisplay();
+        }
+        function updateCartDisplay() {
+            const cartList = document.getElementById('cart');
+            cartList.innerHTML = '';
+            for (let product in cart) {
+                const listItem = document.createElement('li');
+                listItem.innerText = `${product} - Quantity: ${cart[product].quantity} - Total Price: Rs ${cart[product].Price}`;
+                
+                cartList.appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+
+</html>

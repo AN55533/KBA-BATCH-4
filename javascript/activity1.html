@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Write a JS program to print natural numbers from 10 to 50 using while loop . Find the sum & average.
+        document.write("1.Write a JS program to print natural numbers from 10 to 50 using while loop . Find the sum & average.")
+        let sum = 0;
+        let i = 10
+        count = 0
+        while (i <= 50) {
+            document.write("<br>", i)
+            sum += i;
+            count++;
+            i += 10;
+            
+        }
+
+
+
+        document.write("<br> Sum:", sum)
+        document.write("<br> Average:", sum / count)
+
+        //Write a JS program to print cube of numbers from 10 to 30
+        document.write("<br><br>2.Write a JS program to print cube of numbers from 10 to 30")
+        for (let num = 10; num <= 30; num++) {
+            // cube = num * num * num
+            document.write(`<br>Cube of ${num}: ${num ** 3}`)
+        }
+
+        //Write a JS program to print multiplication table for a given number
+        document.write("<br><br>3.Write a JS program to print multiplication table for a given number")
+        let num = 5;
+        for (let i = 1; i <= 10; i++) {
+            
+            document.write(`<br>${num} x ${i} = ${num * i}`)
+        }
+
+        //Write a JS program to check whether the given string is palindrome or not
+        document.write("<br>4.Write a JS program to check whether the given string is palindrome or not")
+
+        const str = "KERALA";
+        let reversedStr = "";
+
+        for (let i = str.length - 1; i >= 0; i--) {
+            reversedStr += str[i];
+        }
+        if (str === reversedStr) {
+            document.write(`<br>${str} is a palindrome`)
+        } else {
+            document.write(`<br>${str} is not a palindrome`)
+        }
+
+        //Write a JS program to print reverse of a number
+        document.write("<br><br>5.Write a JS program to print reverse of a number")
+        let number = 1234;
+        let reverse = 0;
+        for (; number !== 0; number = Math.floor(number / 10)) {
+            const digit = number % 10;
+            reverse = reverse * 10 + digit;
+        }
+        document.write(`<br>The reversed number is ${reverse}`)
+
+        //Write a JS program to print the patterns
+
+        25, 30, 35, 40, 45, 50
+
+        10, 100, 1000, 10000
+
+        8, 10, 12, 14, 16, 18, 20
+
+        document.write("<br><br>6.Write a JS program to print the patterns")
+        let pattern1 = "";
+        for (i = 25; i <= 50; i += 5) {
+            pattern1 += i + ", ";
+        }
+        document.write("<br>", pattern1)
+
+        let pattern2 = "";
+        for (let i = 10; i <= 10000; i *= 10) {
+            pattern2 += i + " ,";
+        }
+        document.write("<br>", pattern2)
+
+        let pattern3 = "";
+        for (let i = 8; i <= 20; i += 2) {
+            pattern3 += i + " ,";
+        }
+        document.write("<br>", pattern3)
+    </script>
+</body>
+
+</html>

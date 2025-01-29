@@ -1,0 +1,74 @@
+
+<!-- Html page to enter names of fruits and insert the entered name to array and there is a dropdown and on selecting the
+index from drop down, display the fruit on the index. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+    <h2>Fruit List</h2>
+
+    <label for="fruitInput">Enter Fruit Name:</label>
+    <input type="text" id="fruitInput">
+    <button onclick="addFruit()">Add</button>
+
+    <h3>Select Index:</h3>
+    <select id="index" onchange="displayFruit()">
+        <option value="">Select Index</option>
+    </select>
+
+    <h3>Selected Fruit:</h3>
+    <p id="selectedFruit">No fruit selected</p>
+
+    <script>
+        let fruits = []; 
+
+        function addFruit() {
+            const fruitInput = document.getElementById("fruitInput");
+            const fruitName = fruitInput.value.trim();
+
+            if (fruitName === "") {
+                alert("Please enter a fruit name!");
+                return;
+            }
+
+            fruits.push(fruitName);
+            fruitInput.value = ""; 
+            updateDropdown();
+        }
+
+        function updateDropdown() {
+            const dropdown = document.getElementById("index");
+            dropdown.innerHTML = '<option value="">Select Index</option>'; 
+
+            fruits.forEach((fruit, index) => {
+                let option = document.createElement("option");
+                option.value = index;
+                option.textContent = index;
+                dropdown.appendChild(option);
+            });
+        }
+
+        function displayFruit() {
+            const dropdown = document.getElementById("index");
+            const selectedIndex = dropdown.value;
+
+            if (selectedIndex !== "") {
+                document.getElementById("selectedFruit").textContent = `Fruit: ${fruits[selectedIndex]}`;
+            } else {
+                document.getElementById("selectedFruit").textContent = "No fruit selected";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
