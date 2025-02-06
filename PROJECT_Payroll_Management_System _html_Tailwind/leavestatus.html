@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Status Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-8">
+
+    <nav class="bg-gray-400  p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="" class="text-white text-xl font-bold">Payroll Management</a>
+            <ul class="flex space-x-6 text-white">
+                <li><a href="Userdashboard.html" class="hover:text-blue-300">HOME</a></li>
+                <li><a href="home.html" class="hover:text-blue-300">LOGOUT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mx-auto bg-white p-8 rounded-lg shadow-lg w-4xl">
+        <h1 class="text-2xl font-bold text-center mb-6">Leave Status</h1>
+
+        <form>
+
+            <div class="flex flex-col">
+                <label for="from_date" class="font-semibold">From Date</label>
+                <input type="date" 
+                    class="mt-1 p-2 border-gray-300 " value="2025-01-16" readonly>
+            </div>
+            
+            
+            <div class="flex flex-col">
+                <label for="to_date" class="font-semibold">To Date</label>
+                <input type="date" id="todate" name="todate"
+                    class="mt-1 p-2 border-gray-300" value="2025-01-19" readonly>
+            </div>
+
+          
+
+
+            <div class="flex flex-col">
+                <label for="leave_type" class="font-semibold">Leave Type</label>
+                <input type="text" 
+                    class="mt-1 p-2 border border-gray-300 " value="Casual Leave" readonly>
+            </div>
+            
+            
+            <div class="flex flex-col">
+                <label for="reason" class="font-semibold">Reason for Leave</label>
+                <textarea id="reason" name="reason" rows="4" class="mt-1 p-2 border border-gray-300"
+                    readonly>Personal reasons</textarea>
+            </div>
+            
+            
+            <div class="flex ">
+                <label  class="font-bold">Applied On</label>
+                <input type="date" 
+                    class="mt-1 p-2 border border-gray-300" value="2025-01-14" readonly>
+            </div>
+            <div class="flex flex-col">
+                <label for="status" class="font-bold">Leave Status</label>
+                <input type="text" class="mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500"
+                    value="Pending" readonly>
+            </div>
+           
+         
+        </form>
+    </div>
+
+</body>
+
+</html>

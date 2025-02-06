@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+
+<body class="bg-gray-100 p-8">
+    <nav class="bg-blue-400 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="admindashboard.html" class="text-white text-xl font-bold">Payroll Management</a>
+            <ul class="flex space-x-6 text-white">
+                <li><a href="admindashboard.html" class="hover:text-blue-300">HOME</a></li>
+                <li><a href="home.html" class="hover:text-blue-300">LOGOUT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mx-auto bg-white p-8  ">
+        <h1 class="text-2xl font-semibold text-center mb-6">Payroll Management System</h1>
+
+        <form  class="space-y-6" >
+           
+            <div class="text-center">
+                <button type="button"
+                    class="bg-blue-500 text-white py-2 px-4   hover:bg-blue-600"
+                    >Add Employee</button>
+            </div>
+
+
+        </form>
+        <div class="employee-form bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-xl font-semibold mb-4">Employee Salary Details</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white">
+                    <tbody>
+                        <tr>
+                        <tr>
+                            <th class="py-2 px-4 border-b text-left">Name</th>
+                            <th class="py-2 px-4 border-b text-left">ID No</th>
+                            <th class="py-2 px-4 border-b text-left">Month</th>
+                            <th class="py-2 px-4 border-b text-left">Year</th>
+                            <th class="py-2 px-4 border-b text-left">Designation</th>
+                            <th class="py-2 px-4 border-b text-left">Gross Salary</th>
+                            <th class="py-2 px-4 border-b text-left">Extra Allowance</th>
+                            <th class="py-2 px-4 border-b text-left">Deductions</th>
+                            <th class="py-2 px-4 border-b text-left">Net Salary</th>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2">
+                                <input type="text" name="name"
+                                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500"
+                                    required>
+                            </td>
+                            <td class="px-4 py-2">
+                                <input type="text" name="idno"
+                                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500"
+                                    required>
+                            </td>
+                            <td class="px-4 py-2">
+                                <select name="month"
+                                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500"
+                                    required>
+                                    <option value="" disabled selected>Select Month</option>
+                                    <option value="January">January</option>
+                                    <option value="February">February</option>
+                                    <option value="March">March</option>
+                                    <option value="April">April</option>
+                                    <option value="May">May</option>
+                                    <option value="June">June</option>
+                                    <option value="July">July</option>
+                                    <option value="August">August</option>
+                                    <option value="September">September</option>
+                                    <option value="October">October</option>
+                                    <option value="November">November</option>
+                                    <option value="December">December</option>
+                                </select>
+                            </td>
+                            <td class="px-4 py-2">
+                                <select name="year"
+                                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500"
+                                    required>
+                                    <option value="" disabled selected>Select Year</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                </select>
+                            </td>
+                            <td class="px-4 py-2">
+                                <input type="text" name="designation"
+                                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500"
+                                    required>
+                            </td>
+                            <td class="px-4 py-2">
+                                <input type="number" name="gross_salary"
+                                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500"
+                                    required >
+                            </td>
+                            <td class="px-4 py-2">
+                                <input type="number" name="extra_allowance"
+                                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500"
+                                   >
+                            </td>
+                            <td class="px-4 py-2">
+                                <input type="number" name="deductions"
+                                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500"
+                                   >
+                            </td>
+                            <td class="px-4 py-2">
+                                <input type="number" name="net_salary"
+                                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500"
+                                    readonly>
+                            </td>
+                            <td class="px-4 py-2">
+                                <button type="button" class="text-red-500">Remove
+                                    Employee</button>
+        
+        
+                        </tr>
+                        <tr>
+                            <td>
+        
+                               <a href="paymentslip.html"><button type="submit"
+                                    class="w-full bg-blue-500 text-white py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 hover:bg-blue-600">Generate
+                                    Salary Slips</button></a>
+                            </td>
+                        </tr>
+        
+        
+                    </tbody>
+        
+                </table>
+            </div>
+        </div>
+
+
+
+        <div id="salary-summary-container" class="mt-6"></div>
+    </div>
+
+</body>
+
+</html>

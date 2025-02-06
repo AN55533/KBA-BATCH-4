@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Leave Request</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-8">
+
+    <nav class="bg-blue-400 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="" class="text-white text-xl font-bold">Payroll Management</a>
+            <ul class="flex space-x-6 text-white">
+                <li><a href="admindashboard.html" class="hover:text-blue-300">HOME</a></li>
+                <li><a href="home.html" class="hover:text-blue-300">LOGOUT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mx-auto bg-white p-8 rounded-lg shadow-lg max-w-4xl">
+        <h1 class="text-2xl font-semibold text-center mb-6">View Leave Request</h1>
+
+      
+        <form action=""  class="space-y-6">  
+            <div class="flex flex-col">
+                <label class="font-semibold">Employee Name</label>
+                <input type="text" 
+                    class="mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500" value="Anu" readonly>
+            </div>
+
+           
+            <div class="flex flex-col">
+                <label class="font-semibold">From Date</label>
+                <input type="date" 
+                    class="mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500" value="2025-01-16" readonly>
+            </div>
+
+           
+            <div class="flex flex-col">
+                <label  class="font-semibold">To Date</label>
+                <input type="date" 
+                    class="mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500" value="2025-01-19" readonly>
+            </div>
+
+            <div class="flex flex-col">
+                <label class="font-semibold">Leave Type</label>
+                <input type="text" id="leave_type" name="leave_type"
+                    class="mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500" value="Casual Leave" readonly>
+            </div>
+
+       
+            <div class="flex flex-col">
+                <label  class="font-semibold">Reason for Leave</label>
+                <textarea id="reason" name="reason" rows="4"
+                    class="mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500"
+                    readonly>Personal reasons</textarea>
+            </div>
+
+       
+            <div class="flex flex-col">
+                <labeln class="font-semibold">Applied On</label>
+                <input type="date" 
+                    class="mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500" value="2025-01-14" readonly>
+            </div>
+            <div class="flex flex-col">
+                <label class="font-semibold">Leave Status</label>
+                <input type="text" 
+                    class="mt-1 p-2 border border-gray-300 rounded-md focus:ring-blue-500" value="Pending" readonly>
+            </div>       
+           
+            <div class="flex justify-center">
+                <a href="updatestatus.html"><button type="submit"
+                    class="bg-blue-500 text-white py-2 px-6 rounded-md focus:outline-none hover:bg-blue-600">
+                    Update Status
+                </button></a>
+              
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

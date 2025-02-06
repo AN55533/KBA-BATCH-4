@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Slip</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-8">
+    <nav class="bg-blue-400 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="" class="text-white text-xl font-bold">Payroll Management</a>
+            <ul class="flex space-x-6 text-white">
+                <li><a href="Userdashboard.html" class="hover:text-blue-300">HOME</a></li>
+                <li><a href="home.html" class="hover:text-blue-300">LOGOUT</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mx-auto bg-white p-8 rounded-lg shadow-lg max-w-lg">
+        <h1 class="text-2xl font-semibold text-center mb-6">Employee Payment Slip</h1>
+
+
+        <div class="space-y-4 mb-6">
+            <div class="flex justify-between">
+                <span class="font-semibold">Employee Name:</span>
+                <span>Anu</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="font-semibold">Employee ID:</span>
+                <span>EMP12345</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="font-semibold">Designation:</span>
+                <span>Software Developer</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="font-semibold">Month:</span>
+                <span>January</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="font-semibold">Year:</span>
+                <span>2025</span>
+            </div>
+        </div>
+
+
+        <div class="space-y-4 mb-6">
+            <div class="flex justify-between">
+                <span class="font-semibold">Gross Salary:</span>
+                <span>10000</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="font-semibold">Extra Allowance:</span>
+                <span>1000.00</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="font-semibold">Deductions:</span>
+                <span>200.00</span>
+            </div>
+            <div class="flex justify-between border-t pt-4">
+                <span class="font-semibold">Net Salary:</span>
+                <span class="text-green-500">$10800.00</span>
+            </div>
+        </div>
+
+
+        <div class="space-y-4 mb-6 text-sm">
+            <div class="flex justify-between">
+                <span class="font-semibold">Company Name:</span>
+                <span>XYZ </span>
+            </div>
+            <div class="flex justify-between">
+                <span class="font-semibold">Company Address:</span>
+                <span>Kollam</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="font-semibold">Contact:</span>
+                <span>1234567</span>
+            </div>
+        </div>
+
+
+        <div class="flex justify-between items-center border-t pt-6 mt-6">
+            <span class="text-xs text-gray-600">Generated on: January 15, 2025</span>
+            <button
+                class="bg-blue-500 text-white py-2 px-4 rounded-md focus:outline-none hover:bg-blue-600 text-xs">Download
+                Slip</button>
+        </div>
+    </div>
+</body>
+
+</html>

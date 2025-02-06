@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+   <body>
+<nav class="bg-gray-400  p-4">
+    <div class="flex justify-between items-center">
+        <a href="#" class="text-white text-xl font-bold">Payroll Management</a>
+        <ul class="flex space-x-6 text-white">
+            <li><a href="admindashboard.html" class="hover:text-blue-300">HOME</a></li>
+            <li><a href="home.html" class="hover:text-blue-300">LOGOUT</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+
+   
+    <div class=" bg-white p-6  mb-6">
+    <h2 class="text-xl font-bold mb-4">Employee Salary Details</h2>
+    <div >
+        <table class="w-full bg-white">
+            <tbody>
+                <tr>
+                     <tr>
+                        <th class="py-2 px-4 ">Name</th>
+                        <th class="py-2 px-4 ">ID No</th>
+                        <th class="py-2 px-4 ">Month</th>
+                        <th class="py-2 px-4 ">Year</th>
+                        <th class="py-2 px-4 ">Designation</th>
+                        <th class="py-2 px-4 ">Gross Salary</th>
+                        <th class="py-2 px-4 ">Extra Allowance</th>
+                        <th class="py-2 px-4 ">Deductions</th>
+                        <th class="py-2 px-4 ">Net Salary</th>
+                    </tr>
+                </tr>
+                <tr>
+                    <td class="py-2 px-4 border-b">
+                        <input type="text" name="name" class="mt-1 block w-full px-4 py-2 border border-blue-300 ">
+                    </td>
+                <td class="py-2 px-4 border-b">
+                        <input type="text" name="idno" class="mt-1 block w-full px-4 py-2 border border-blue-300 " >
+                    </td>
+                    <td class="py-2 px-4 border-b">
+                        <select name="month" class="mt-1 block w-full px-4 py-2 border border-blue-300 ">
+                            <option value="" disabled selected>Select Month</option>
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                    </td>
+                    <td class="py-2 px-4 ">
+                        <select name="year" class="mt-1 block w-full px-4 py-2 border border-blue-300 " >
+                            <option value="" disabled selected>Select Year</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                        </select>
+                    </td>
+                     <td class="px-4 py-2">
+                        <input type="text"  class="mt-1 block w-full px-4 py-2 border border-blue-300  " >
+                    </td>
+                    <td class="px-4 py-2">
+                        <input type="number"  class="mt-1 block w-full px-4 py-2 border border-blue-300 ">
+                    </td>
+                    <td class="px-4 py-2">
+                        <input type="number"  class="mt-1 block w-full px-4 py-2 border border-blue-300 " >
+                    </td>
+                   <td class="px-4 py-2">
+                        <input type="number" class="mt-1 block w-full px-4 py-2 border border-blue-300  " >
+                    </td>
+                    <td class="px-4 py-2">
+                        <input type="number" class="mt-1 block w-full px-4 py-2 border border-blue-300 ">
+                    </td>
+                    <td class="px-4 py-2">
+                        <button type="button" class="text-red-500" >Remove Employee</button></td>
+                    
+                    <td class="px-4 py-2">
+                        <button type="button"
+                            class="bg-gray-800 text-white py-2 px-4   hover:bg-gray-600"
+                            >Add Employee</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                    <a href="paymentslip.html"><button type="submit"
+                    class="w-full bg-gray-800 text-white py-2 px-4  hover:bg-gray-600">Generate
+                    Salary Slips</button></a>
+                    </td>
+                </tr>
+                
+               
+            </tbody>
+            
+        </table>
+    </div>
+</div>  
+</body>
+</html>
