@@ -79,7 +79,7 @@ adminauth.put('/updatedetails', async (req, res) => {
     
 })
 
-adminauth.delete('/delete', async (req, res) => {
+adminauth.delete('/delete/:ItemName', async (req, res) => {
 
     ItemName = req.params.ItemName;
     const result = await inventory.findByIdAndDelete((ItemName))
